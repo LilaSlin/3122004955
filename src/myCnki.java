@@ -93,14 +93,25 @@ public class myCnki {
     }
 
     public static void main(String[] args) {
-        String originPath = "D:\\temp\\orig.txt";
+
+        if (args.length != 3) {
+            System.out.println("参数错误,应为Java: java -jar main.jar [原文文件] [对比版论文的文件] [答案文件]");
+            return;
+        }
+
+        String originPath = args[0];
+        String comparedPath = args[1];
+        String outputPath = args[2];
+
+        /*String originPath = "D:\\temp\\orig.txt";
         String comparedPath = "D:\\temp\\orig_0.8_del.txt";
+        String outputPath = "D:\\temp\\result.txt";*/
 
         try {
             // 读取原文文本文件和对比版论文文本文件
             String originalText = readFile(originPath);
             String comparedText = readFile(comparedPath);
-            String outputPath = "D:\\temp\\result.txt";
+
 
             // 计算相似度
             double similarity = calculateCosineSimilarity(originalText, comparedText);
