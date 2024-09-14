@@ -104,7 +104,7 @@ public class myCnki {
         String outputPath = args[2];
 
         /*String originPath = "D:\\temp\\orig.txt";
-        String comparedPath = "D:\\temp\\orig_0.8_del.txt";
+        String comparedPath = "D:\\temp\\orig_0.8_dis_15.txt";
         String outputPath = "D:\\temp\\result.txt";*/
 
         try {
